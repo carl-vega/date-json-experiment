@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <style>
+      .material-icons {
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m9 l11">
+          <div class="row">
+            <h2 id="introduction" class="col s12 section scrollspy">
+              Date JSON Project
+            </h2>
+          </div>
+          <div class="row">
+            <p class="col s12">
+              This is a demonstration of a simple use case for the Date() object
+              to create a JSON snippet including the number of days per month,
+              that can vary in a during a leap year. The GitHub link provided
+              will have the code necessary to explain how this is done.
+              <a href="https://github.com/carl-vega/date-json-experiment"
+                >GitHub<i class="material-icons">code</i></a
+              >
+            </p>
+
+            <p>
+              Enter desired first and last year, defualt values are set in input
+              fields at ten years in both directions.
+            </p>
+            <div class="input-field col s3">
+              <input value="2009" id="year" type="text" class="validate" />
+              <label class="active" for="year">Initial Year</label>
+            </div>
+            <div class="input-field col s3">
+              <input value="2028" id="year" type="text" class="validate" />
+              <label class="active" for="year">Last Year</label>
+            </div>
+          </div>
+          <form action="#" class="row">
+            <p>
+              Check desired months, by default all months are selected.
+            </p>
+            <p class="col s1">
+              <label>
+                <input type="checkbox" checked="checked" />
+                <span>Jan</span>
+              </label>
+            </p>
+            <p class="col s1">
+              <label>
+                <input type="checkbox" checked="checked" />
+                <span>Feb</span>
+              </label>
+            </p>
+            <p class="col s1">
+              <label>
+                <input type="checkbox" checked="checked" />
+                <span>Mar</span>
+              </label>
+            </p>
+            <p class="col s1">
+              <label>
+                <input type="checkbox" checked="checked" />
+                <span>Apr</span>
+              </label>
+            </p>
+            <p class="col s1">
+              <label>
+                <input type="checkbox" checked="checked" />
+                <span>May</span>
+              </label>
+            </p>
+            <p class="col s1">
+              <label>
+                <input type="checkbox" checked="checked" />
+                <span>Jun</span>
+              </label>
+            </p>
+            <p class="col s1">
+              <label>
+                <input type="checkbox" checked="checked" />
+                <span>Jul</span>
+              </label>
+            </p>
+            <p class="col s1">
+              <label>
+                <input type="checkbox" checked="checked" />
+                <span>Aug</span>
+              </label>
+            </p>
+            <p class="col s1">
+              <label>
+                <input type="checkbox" checked="checked" />
+                <span>Sep</span>
+              </label>
+            </p>
+            <p class="col s1">
+              <label>
+                <input type="checkbox" checked="checked" />
+                <span>Oct</span>
+              </label>
+            </p>
+            <p class="col s1">
+              <label>
+                <input type="checkbox" checked="checked" />
+                <span>Nov</span>
+              </label>
+            </p>
+            <p class="col s1">
+              <label>
+                <input type="checkbox" checked="checked" />
+                <span>Dec</span>
+              </label>
+            </p>
+          </form>
+          <div class="row">
+            <div id="json-area" class="col s12 section scrollspy"></div>
+            <div id="code" class="col s12 section scrollspy">
+              <p>
+                Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                Aenean eu leo quam. Pellentesque ornare sem lacinia quam
+                venenatis vestibulum. Donec ullamcorper nulla non metus auctor
+                fringilla. Praesent commodo cursus magna, vel scelerisque nisl
+                consectetur et.
+              </p>
+              <p>
+                Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                condimentum nibh, ut fermentum massa justo sit amet risus.
+                Curabitur blandit tempus porttitor. Praesent commodo cursus
+                magna, vel scelerisque nisl consectetur et. Cras mattis
+                consectetur purus sit amet fermentum. Duis mollis, est non
+                commodo luctus, nisi erat porttitor ligula, eget lacinia odio
+                sem nec elit. Vestibulum id ligula porta felis euismod semper.
+              </p>
+              <p>
+                Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                condimentum nibh, ut fermentum massa justo sit amet risus.
+                Praesent commodo cursus magna, vel scelerisque nisl consectetur
+                et. Cras mattis consectetur purus sit amet fermentum. Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                blandit tempus porttitor. Maecenas faucibus mollis interdum.
+                Cras mattis consectetur purus sit amet fermentum.
+              </p>
+              <p>
+                Maecenas faucibus mollis interdum. Vestibulum id ligula porta
+                felis euismod semper. Praesent commodo cursus magna, vel
+                scelerisque nisl consectetur et. Cras justo odio, dapibus ac
+                facilisis in, egestas eget quam. Maecenas faucibus mollis
+                interdum.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col hide-on-small-only m3 l1">
+          <div class="toc-wrapper pinned">
+            <ul class="section table-of-contents">
+              <li><a href="#introduction">Introduction</a></li>
+              <li><a href="#json-area">JSON Demonstration</a></li>
+              <li><a href="#code">Code Breakdown</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script async defer>
+      function dateJSON() {
+        // get current date
+        const initialDate = new Date();
+        // instantiate date object for all dates
+        const dateObjects = [];
+        // get current year
+        const currentYear = initialDate.getFullYear();
+        // minus to have value of ten years back from present year
+        const decadeBack = currentYear - 10;
+        // for loop to create 20 years of objects
+        for (let i = 0; i <= 19; i++) {
+          let years = {};
+          let yearCount = decadeBack + i;
+          // instantiate array of months
+          let monthsOfYear = [];
+          // for loop to create a full year of month objects
+          for (let j = 0; j <= 11; j++) {
+            // get month name counter
+            let monthIterator = new Date(yearCount, j).toString().slice(4, 7);
+            // get the last day of same month and convert it to an integer
+            let lastDate = parseInt(
+              new Date(yearCount, j + 1, 0).toString().slice(8, 10)
+            );
+            // instantiate an object of to store month name and last day of month
+            let month = {};
+            month = {
+              month: monthIterator,
+              days: lastDate
+            };
+            // push full year of months objects
+            monthsOfYear.push(month);
+          }
+          // store year and array of months objects
+          years = {
+            year: yearCount,
+            months: monthsOfYear
+          };
+          dateObjects.push(years);
+        }
+        console.log(dateObjects);
+        const JSONstring = JSON.stringify(dateObjects, null, 4);
+        const preTag = document.createElement("pre");
+        preTag.innerHTML = JSONstring;
+        document.getElementById("json-area").appendChild(preTag);
+      }
+      dateJSON();
+      document.addEventListener("DOMContentLoaded", function() {
+        var elems = document.querySelectorAll(".scrollspy");
+        var options = { scrollOffset: 0 };
+        var instances = M.ScrollSpy.init(elems, options);
+      });
+    </script>
+  </body>
+</html>
